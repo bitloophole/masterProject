@@ -251,7 +251,7 @@ def get_model_stats(model: nn.Module, input_dim: int) -> Dict[str, float]:
         per_layer_flops = (
             8 * L * d * d
             + 4 * L * L * d
-            + 4 * L * d * 128
+            + 4 * L * d * 64
         )
 
         transformer_flops = per_layer_flops * 2  # num_layers=2 default
