@@ -3,6 +3,8 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+iot_dataset_after_undersampling.csv
+
 data/
 # C extensions
 *.so

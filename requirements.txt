@@ -6,3 +6,4 @@ matplotlib>=3.9
 flwr[simulation]>=1.9
 # Optional for Torch-based training paths
 torch>=2.2
+opacus>=1.1
