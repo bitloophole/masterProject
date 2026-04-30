@@ -82,44 +82,14 @@ class ExperimentResources:
 
 
 def load_data() -> Tuple[np.ndarray, np.ndarray]:
-    df = pd.read_csv("iot_dataset_undersampled_mapped1.csv")
+    df = pd.read_csv("iot_dataset_after_undersampling.csv")
 
-    df.drop_duplicates(inplace=True)
-    df.fillna(0, inplace=True)
-    original_attack_categories = df["Attack_Category"].copy()
-
-    df["Attack_Category"] = df["Attack_Category"].apply(
-        lambda value: 0 if value == "BENIGN" else 1
-    )
-
-    df_benign = df[df["Attack_Category"] == 0]
-    df_attack = df[df["Attack_Category"] == 1]
-
-    df_attack_undersampled = resample(
-        df_attack,
-        replace=False,
-        n_samples=len(df_benign),
-        random_state=RANDOM_STATE,
-    )
-
-    df_balanced = pd.concat([df_attack_undersampled, df_benign])
-    df_balanced = df_balanced.sample(frac=1, random_state=RANDOM_STATE)
-
-    attack_type_counts = (
-        original_attack_categories.loc[df_attack_undersampled.index]
-        .value_counts()
-        .sort_index()
-    )
-
-    print("\n===== ATTACK TYPES IN CLASS 1 AFTER UNDERSAMPLING =====")
-    print(attack_type_counts)
-    print("=======================================================")
-
+    
     print("\n================ DATA SUMMARY ================")
-    print(df_balanced["Attack_Category"].value_counts())
+    print(df["Attack_Category"].value_counts())
 
-    X = df_balanced.drop(["Label", "Attack_Category"], axis=1).values
-    y = df_balanced["Attack_Category"].values
+    X = df.drop(["Label", "Attack_Category"], axis=1).values
+    y = df["Attack_Category"].values
 
     scaler = StandardScaler()
     X = scaler.fit_transform(X)
