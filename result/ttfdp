@@ -1,0 +1,30 @@
+================ DATA SUMMARY ================
+Attack_Category
+1    1047296
+0    1047296
+Name: count, dtype: int64
+
+============== CLIENT DISTRIBUTION ==============
+Client 0: total=279280 | benign=209460 | attack=69820 | train=195496 | val=27928 | test=55856
+Client 1: total=279278 | benign=69819 | attack=209459 | train=195494 | val=27928 | test=55856
+Client 2: total=279278 | benign=209459 | attack=69819 | train=195494 | val=27928 | test=55856
+Client 3: total=279278 | benign=69819 | attack=209459 | train=195494 | val=27928 | test=55856
+Client 4: total=279278 | benign=209459 | attack=69819 | train=195494 | val=27928 | test=55856
+=================================================
+
+================ MODEL PROFILE ================
+Parameters           : 101633
+Model Size           : 397.00 KB
+Forward FLOPs/sample : 1833728
+Training FLOPs/sample: 5501184
+================================================
+
+============== FEDERATED TTF DP TRAINING ==============
+Clients=5 | Rounds=45 | Local Epochs=5 | Batch Size=32
+Privacy Budgets (ε)=[1.0, 3.0, 5.0, 10.0]
+========================================================
+
+
+======================================================================
+STARTING TTF DP EXPERIMENT WITH PRIVACY BUDGET ε = 1.0
+======================================================================
