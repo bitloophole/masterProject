@@ -1,0 +1,38 @@
+(venv) vedhanshi@Vedhanshi-2 finalthesis % python 1dcnnbinarydpdq.py
+
+================ DATA SUMMARY ================
+Attack_Category
+1    1047296
+0    1047296
+Name: count, dtype: int64
+================================================
+/Users/vedhanshi/Documents/finalthesis/1dcnnbinarydpdq.py:172: DeprecationWarning: torch.ao.quantization is deprecated and will be removed in 2.10. 
+For migrations of users: 
+1. Eager mode quantization (torch.ao.quantization.quantize, torch.ao.quantization.quantize_dynamic), please migrate to use torchao eager mode quantize_ API instead 
+2. FX graph mode quantization (torch.ao.quantization.quantize_fx.prepare_fx,torch.ao.quantization.quantize_fx.convert_fx, please migrate to use torchao pt2e quantization API instead (prepare_pt2e, convert_pt2e) 
+3. pt2e quantization has been migrated to torchao (https://github.com/pytorch/ao/tree/main/torchao/quantization/pt2e) 
+see https://github.com/pytorch/ao/issues/2259 for more details
+  quantized_model = quantize_dynamic(
+[W501 23:59:12.115774000 qlinear_dynamic.cpp:251] Warning: Currently, qnnpack incorrectly ignores reduce_range when it is set to true; this may change in a future release. (function operator())
+
+================ PTDQ RESULTS ================
+Loaded Model          : saved_models/dp_1dcnnsh_epsilon_5.0.pth
+Dataset               : iot_dataset_after_undersampling.csv
+Accuracy              : 0.9118
+Precision             : 0.9853
+Recall                : 0.8107
+F1-score              : 0.8895
+AUC-ROC               : 0.9644
+Total Inference Time  : 4.473509 s
+Avg Inference/sample  : 0.016018 ms
+FP32 Model Size       : 203.01 KB
+INT8 Model Size       : 69.71 KB
+Size Reduction        : 133.31 KB
+Reduction Percentage  : 65.66%
+================================================
+
+========== CONFUSION MATRIX ==========
+TN: 152638    FP: 966
+FN: 23668    TP: 102008
+======================================
+(venv) vedhanshi@Vedhanshi-2 finalthesis % 
