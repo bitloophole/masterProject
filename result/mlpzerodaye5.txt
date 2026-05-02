@@ -1,0 +1,57 @@
+(venv) vedhanshi@Vedhanshi-2 finalthesis % python mlpbinarygannew.py
+
+================ REAL DATA SUMMARY ================
+Attack_Category
+1    1047296
+0    1047296
+Name: count, dtype: int64
+===================================================
+
+================ MODEL INFO ================
+Input dimension       : 39
+Loaded pretrained DP model: mlp_global_model_eps_5.0.pt
+Privacy budget ε      : 5.0
+============================================
+/Users/vedhanshi/Documents/finalthesis/mlpbinarygannew.py:184: RuntimeWarning: overflow encountered in exp
+  probs = 1.0 / (1.0 + np.exp(-logits))
+
+=========== SYNTHETIC TEST SET SUMMARY ===========
+Attack_Category
+0    209460
+1    209459
+Name: count, dtype: int64
+==================================================
+
+================ REAL TEST RESULTS ================
+Accuracy       : 0.9115
+Precision      : 0.9876
+Recall         : 0.8335
+F1-score       : 0.9041
+AUC-ROC        : 0.9672
+Inference Time : 0.065665 s
+------------------------------------------
+Confusion Matrix
+TN: 207268    FP: 2192
+FN: 34865    TP: 174594
+==========================================
+
+================ SYNTHETIC TEST RESULTS ================
+Accuracy       : 0.9088
+Precision      : 0.9373
+Recall         : 0.8762
+F1-score       : 0.9057
+AUC-ROC        : 0.9656
+Inference Time : 0.022610 s
+------------------------------------------
+Confusion Matrix
+TN: 197189    FP: 12271
+FN: 25933    TP: 183526
+==========================================
+
+================ SUMMARY TABLE ================
+ epsilon  real_accuracy  real_precision  real_recall  real_f1_score  real_auc_roc  real_inference_time_sec  real_tn  real_fp  real_fn  real_tp  synthetic_accuracy  synthetic_precision  synthetic_recall  synthetic_f1_score  synthetic_auc_roc  synthetic_inference_time_sec  synthetic_tn  synthetic_fp  synthetic_fn  synthetic_tp
+     5.0       0.911541        0.987601     0.833547       0.904058      0.967167                 0.065665 207268.0   2192.0  34865.0 174594.0            0.908803             0.937328          0.876191            0.905729           0.965552                       0.02261      197189.0       12271.0       25933.0      183526.0
+===============================================
+
+Saved results to: pretrained_dp_model_real_vs_synthetic_results.csv
+(venv) vedhanshi@Vedhanshi-2 finalthesis % 
