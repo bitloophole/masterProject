@@ -21,8 +21,8 @@ RANDOM_STATE = 42
 
 DATA_PATH = "iot_dataset_after_undersampling.csv"
 
-# Change this to ttf_global_model_eps_5.0.pt if you want epsilon 5
-MODEL_PATH = "saved_models/ttf_global_model_eps_1.0.pt"
+# Change this to ttf_global_model_eps_5.0.pt 
+MODEL_PATH = "saved_models/ttf_global_model_eps_5.0.pt"
 
 
 @dataclass

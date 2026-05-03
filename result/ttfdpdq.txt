@@ -1,30 +1,13 @@
-(venv) vedhanshi@Vedhanshi-2 finalthesis % python ttfbinarydpdq.py
-
-================ DATA SUMMARY ================
-Attack_Category
-1    1047296
-0    1047296
-Name: count, dtype: int64
-================================================
-/Users/vedhanshi/Documents/finalthesis/ttfbinarydpdq.py:188: DeprecationWarning: torch.ao.quantization is deprecated and will be removed in 2.10. 
-For migrations of users: 
-1. Eager mode quantization (torch.ao.quantization.quantize, torch.ao.quantization.quantize_dynamic), please migrate to use torchao eager mode quantize_ API instead 
-2. FX graph mode quantization (torch.ao.quantization.quantize_fx.prepare_fx,torch.ao.quantization.quantize_fx.convert_fx, please migrate to use torchao pt2e quantization API instead (prepare_pt2e, convert_pt2e) 
-3. pt2e quantization has been migrated to torchao (https://github.com/pytorch/ao/tree/main/torchao/quantization/pt2e) 
-see https://github.com/pytorch/ao/issues/2259 for more details
-  quantized_model = quantize_dynamic(
-[W502 00:21:48.382534000 qlinear_dynamic.cpp:251] Warning: Currently, qnnpack incorrectly ignores reduce_range when it is set to true; this may change in a future release. (function operator())
-
 ================ TTF PTDQ RESULTS ================
-Loaded Model          : saved_models/ttf_global_model_eps_1.0.pt
+Loaded Model          : ttf_global_model_eps_5.0.pt
 Dataset               : iot_dataset_after_undersampling.csv
-Accuracy              : 0.7924
-Precision             : 0.6838
-Recall                : 0.8995
-F1-score              : 0.7568
-AUC-ROC               : 0.9284
-Total Inference Time  : 14.428191 s
-Avg Inference/sample  : 0.051662 ms
+Accuracy              : 0.8981
+Precision             : 0.9310
+Recall                : 0.8149
+F1-score              : 0.8682
+AUC-ROC               : 0.9405
+Total Inference Time  : 16.081892 s
+Avg Inference/sample  : 0.057583 ms
 FP32 Model Size       : 419.28 KB
 INT8 Model Size       : 135.35 KB
 Size Reduction        : 283.94 KB
@@ -32,7 +15,7 @@ Reduction Percentage  : 67.72%
 ==================================================
 
 ========== CONFUSION MATRIX ==========
-TN: 108697    FP: 44907
-FN: 13059    TP: 112617
+TN: 148664    FP: 4940
+FN: 23529    TP: 102147
 ======================================
 (venv) vedhanshi@Vedhanshi-2 finalthesis % 
