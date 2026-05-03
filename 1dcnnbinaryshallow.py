@@ -226,14 +226,14 @@ def get_model_stats(model: nn.Module, input_dim: int) -> Dict[str, float]:
     l2 = l1_pool
     l2_pool = max(l2 // 2, 1)
 
-    conv1_flops = 2 * l1 * 16 * (1 * 3)
-    conv2_flops = 2 * l2 * 32 * (16 * 3)
-    fc1_flops = 2 * (32 * l2_pool) * 64
-    fc2_flops = 2 * 64 * 32
-    fc3_flops = 2 * 32 * 1
+    conv1_flops = 2 * l1 * 24 * (1 * 3)
+    conv2_flops = 2 * l2 * 48 * (24 * 3)
+    fc1_flops = 2 * (48 * l2_pool) * 96
+    fc2_flops = 2 * 96 * 48
+    fc3_flops = 2 * 48 * 1
 
     forward_flops = conv1_flops + conv2_flops + fc1_flops + fc2_flops + fc3_flops
-    training_flops = forward_flops * 3  # rough approximation
+    training_flops = forward_flops * 3
 
     return {
         "parameters": float(total_params),
