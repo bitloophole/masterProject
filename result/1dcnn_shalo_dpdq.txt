@@ -36,3 +36,26 @@ TN: 152638    FP: 966
 FN: 23668    TP: 102008
 ======================================
 (venv) vedhanshi@Vedhanshi-2 finalthesis % 
+
+
+#new
+================ PTDQ RESULTS ================
+Loaded Model          : saved_models/dp_1dcnnsh_epsilon_5.0.pth
+Dataset               : iot_dataset_after_undersampling.csv
+Accuracy              : 0.9142
+Precision             : 0.9595
+Recall                : 0.8309
+F1-score              : 0.8904
+AUC-ROC               : 0.9644
+Total Inference Time  : 4.535584 s
+Avg Inference/sample  : 0.016240 ms
+FP32 Model Size       : 203.01 KB
+INT8 Model Size       : 69.71 KB
+Size Reduction        : 133.31 KB
+Reduction Percentage  : 65.66%
+================================================
+
+========== CONFUSION MATRIX ==========
+TN: 150771    FP: 2833
+FN: 21130    TP: 104546
+======================================

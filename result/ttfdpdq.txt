@@ -19,3 +19,29 @@ TN: 148664    FP: 4940
 FN: 23529    TP: 102147
 ======================================
 (venv) vedhanshi@Vedhanshi-2 finalthesis % 
+
+
+
+#new RESULTS
+
+================ TTF PTDQ RESULTS ================
+Loaded Model          : ttf_global_model_eps_5.0.pt
+Dataset               : iot_dataset_after_undersampling.csv
+Accuracy              : 0.8981
+Precision             : 0.9310
+Recall                : 0.8149
+F1-score              : 0.8682
+AUC-ROC               : 0.9405
+Total Inference Time  : 12.223892 s
+Avg Inference/sample  : 0.043769 ms
+FP32 Model Size       : 419.28 KB
+INT8 Model Size       : 135.35 KB
+Size Reduction        : 283.94 KB
+Reduction Percentage  : 67.72%
+==================================================
+
+========== CONFUSION MATRIX ==========
+TN: 148664    FP: 4940
+FN: 23529    TP: 102147
+======================================
+(.venv) rentamac@rentamacs-Mac-mini masterProject % 
