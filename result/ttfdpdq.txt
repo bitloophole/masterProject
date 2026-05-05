@@ -45,3 +45,32 @@ TN: 148664    FP: 4940
 FN: 23529    TP: 102147
 ======================================
 (.venv) rentamac@rentamacs-Mac-mini masterProject % 
+
+
+
+
+
+
+#new result 6\5\26
+
+=============== TTF PTDQ RESULTS ================
+Loaded Model          : ttf_global_model_eps_5.0.pt
+Dataset               : iot_dataset_after_undersampling.csv
+Accuracy              : 0.8635
+Precision             : 0.7934
+Recall                : 0.8703
+F1-score              : 0.8212
+AUC-ROC               : 0.9359
+Total Inference Time  : 12.125766 s
+Avg Inference/sample  : 0.043418 ms
+FP32 Model Size       : 419.28 KB
+INT8 Model Size       : 135.35 KB
+Size Reduction        : 283.94 KB
+Reduction Percentage  : 67.72%
+==================================================
+
+========== CONFUSION MATRIX ==========
+TN: 131291    FP: 22313
+FN: 15812    TP: 109864
+======================================
+(.venv) rentamac@rentamacs-Mac-mini masterProject % 
